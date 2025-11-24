@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const notes = document.getElementById("notes").value.trim();
 
     if (!name || !email || !date || !time || !service) {
-      messageEl.textContent = "Please fill in all required fields for your notary appointment.";
+      messageEl.textContent = "Please fill in all required fields.";
       messageEl.style.color = "#dc2626";
       return;
     }
@@ -45,12 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error(data.message || "Error submitting appointment request.");
+        throw new Error(data.message || "Error submitting booking.");
       }
 
       bookingForm.reset();
-      messageEl.textContent =
-        "Your notary appointment request has been submitted. We will confirm by email.";
+      messageEl.textContent = "Booking submitted! Check your email for confirmation (if enabled).";
       messageEl.style.color = "#16a34a";
     } catch (err) {
       console.error(err);
