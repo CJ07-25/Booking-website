@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Florida National Notary Service – Book a Notary</title>
+  <title>Booking – Online Appointments</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="header">
     <div class="container header-content">
-      <div class="logo">Florida National <span>Notary</span></div>
+      <div class="logo">My<span>Booking</span></div>
       <nav class="nav">
         <a href="#services">Services</a>
         <a href="#booking">Book Now</a>
@@ -19,113 +19,87 @@
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
       <div class="container hero-content">
         <div class="hero-text">
-          <h1>Book a Notary Appointment Online</h1>
-          <p>
-            Schedule a professional notary for acknowledgments, jurats, loan signings,
-            and more. Mobile and remote options available.
-          </p>
-          <a href="#booking" class="btn primary-btn">Book a Notary</a>
+          <h1>Book Your Appointment Online</h1>
+          <p>Choose a date and time that works best for you. We’ll confirm by email.</p>
+          <a href="#booking" class="btn primary-btn">Book Now</a>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
     <section class="section" id="services">
       <div class="container">
-        <h2 class="section-title">Notary Services</h2>
-        <p class="section-subtitle">
-          Florida National Notary Service provides prompt, professional, and trustworthy notarization.
-        </p>
+        <h2 class="section-title">Services</h2>
         <div class="cards">
           <article class="card">
-            <h3>Standard Notarization</h3>
-            <p>
-              Single document notarization (acknowledgment, jurat, affidavit,
-              consent forms, etc.).
-            </p>
-            <span class="tag">Office / Remote</span>
+            <h3>Standard Session</h3>
+            <p>Perfect for quick appointments.</p>
+            <span class="tag">30 min</span>
           </article>
           <article class="card">
-            <h3>Mobile Notary Appointment</h3>
-            <p>
-              We travel to your home, office, hospital, or public location for your
-              notarization.
-            </p>
-            <span class="tag">Travel Fees Apply</span>
+            <h3>Extended Session</h3>
+            <p>More time to go in depth.</p>
+            <span class="tag">60 min</span>
           </article>
           <article class="card">
-            <h3>Loan Signing Package</h3>
-            <p>
-              Full loan signing for real estate, refinance, HELOC, and closing packages.
-            </p>
-            <span class="tag">Specialized Service</span>
+            <h3>Premium Session</h3>
+            <p>For complex or detailed requests.</p>
+            <span class="tag">90 min</span>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Booking Form -->
     <section class="section section-alt" id="booking">
       <div class="container booking-grid">
         <div>
-          <h2 class="section-title">Book a Notary Appointment</h2>
-          <p class="section-subtitle">
-            Fill out the form below and we will confirm your appointment and any
-            required identification / documents by email.
-          </p>
+          <h2 class="section-title">Book an Appointment</h2>
+          <p class="section-subtitle">Fill out the form and submit your booking.</p>
 
           <form id="bookingForm" class="form">
             <div class="form-group">
               <label for="name">Full Name *</label>
               <input type="text" id="name" required />
             </div>
-
             <div class="form-group">
               <label for="email">Email *</label>
               <input type="email" id="email" required />
             </div>
-
             <div class="form-group">
               <label for="phone">Phone</label>
-              <input type="tel" id="phone" placeholder="Optional but recommended" />
+              <input type="tel" id="phone" />
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="date">Preferred Date *</label>
+                <label for="date">Date *</label>
                 <input type="date" id="date" required />
               </div>
               <div class="form-group">
-                <label for="time">Preferred Time *</label>
+                <label for="time">Time *</label>
                 <input type="time" id="time" required />
               </div>
             </div>
 
             <div class="form-group">
-              <label for="service">Service Type *</label>
+              <label for="service">Service *</label>
               <select id="service" required>
                 <option value="">Select a service</option>
-                <option value="Standard Notarization">Standard Notarization</option>
-                <option value="Mobile Notary Appointment">Mobile Notary Appointment</option>
-                <option value="Loan Signing Package">Loan Signing Package</option>
+                <option value="Standard Session">Standard Session</option>
+                <option value="Extended Session">Extended Session</option>
+                <option value="Premium Session">Premium Session</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="notes">Details (Document Type, Location, etc.)</label>
-              <textarea
-                id="notes"
-                rows="4"
-                placeholder="Example: Power of Attorney, 2 signers, Orlando, prefer mobile notary to my home."
-              ></textarea>
+              <label for="notes">Notes</label>
+              <textarea id="notes" rows="3"></textarea>
             </div>
 
             <button class="btn primary-btn full-width" type="submit">
-              Submit Notary Request
+              Submit Booking
             </button>
 
             <p id="formMessage" class="form-message"></p>
@@ -137,9 +111,7 @@
 
   <footer class="footer">
     <div class="container footer-content">
-      <p>
-        © <span id="year"></span> Florida National Notary Service. All rights reserved.
-      </p>
+      <p>© <span id="year"></span> MyBooking.</p>
     </div>
   </footer>
 
