@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Florida National Notary Service – Book a Notary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">Florida National <span>Notary</span></div>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#booking">Book Now</a>
+        <a href="/admin">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Book a Notary Appointment Online</h1>
+          <p>
+            Schedule a professional notary for acknowledgments, jurats, loan signings,
+            and more. Mobile and remote options available.
+          </p>
+          <a href="#booking" class="btn primary-btn">Book a Notary</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section-title">Notary Services</h2>
+        <p class="section-subtitle">
+          Florida National Notary Service provides prompt, professional, and trustworthy notarization.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Standard Notarization</h3>
+            <p>
+              Single document notarization (acknowledgment, jurat, affidavit,
+              consent forms, etc.).
+            </p>
+            <span class="tag">Office / Remote</span>
+          </article>
+          <article class="card">
+            <h3>Mobile Notary Appointment</h3>
+            <p>
+              We travel to your home, office, hospital, or public location for your
+              notarization.
+            </p>
+            <span class="tag">Travel Fees Apply</span>
+          </article>
+          <article class="card">
+            <h3>Loan Signing Package</h3>
+            <p>
+              Full loan signing for real estate, refinance, HELOC, and closing packages.
+            </p>
+            <span class="tag">Specialized Service</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="section section-alt" id="booking">
+      <div class="container booking-grid">
+        <div>
+          <h2 class="section-title">Book a Notary Appointment</h2>
+          <p class="section-subtitle">
+            Fill out the form below and we will confirm your appointment and any
+            required identification / documents by email.
+          </p>
+
+          <form id="bookingForm" class="form">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" placeholder="Optional but recommended" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Preferred Date *</label>
+                <input type="date" id="date" required />
+              </div>
+              <div class="form-group">
+                <label for="time">Preferred Time *</label>
+                <input type="time" id="time" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service Type *</label>
+              <select id="service" required>
+                <option value="">Select a service</option>
+                <option value="Standard Notarization">Standard Notarization</option>
+                <option value="Mobile Notary Appointment">Mobile Notary Appointment</option>
+                <option value="Loan Signing Package">Loan Signing Package</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Details (Document Type, Location, etc.)</label>
+              <textarea
+                id="notes"
+                rows="4"
+                placeholder="Example: Power of Attorney, 2 signers, Orlando, prefer mobile notary to my home."
+              ></textarea>
+            </div>
+
+            <button class="btn primary-btn full-width" type="submit">
+              Submit Notary Request
+            </button>
+
+            <p id="formMessage" class="form-message"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>
+        © <span id="year"></span> Florida National Notary Service. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
