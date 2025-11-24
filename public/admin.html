@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Florida National Notary – Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">Florida National <span>Notary</span> Admin</div>
+      <nav class="nav">
+        <a href="/">Back to Site</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Admin Panel – Notary Bookings</h1>
+
+      <!-- Login -->
+      <div id="loginSection" class="form">
+        <h2>Admin Login</h2>
+        <p class="section-subtitle" style="margin-bottom:0.75rem;">
+          Enter your admin password to view and manage appointment requests.
+        </p>
+        <div class="form-group">
+          <label for="adminPassword">Password</label>
+          <input type="password" id="adminPassword" />
+        </div>
+        <button id="adminLoginBtn" class="btn primary-btn full-width">
+          Login
+        </button>
+        <p id="adminLoginMessage" class="form-message"></p>
+      </div>
+
+      <!-- Admin Area -->
+      <div id="adminSection" style="display:none;">
+        <div class="admin-header">
+          <h2>Appointment Requests</h2>
+          <button id="adminLogoutBtn" class="btn secondary-btn">Logout</button>
+        </div>
+        <p class="section-subtitle" style="margin-bottom:0.75rem;">
+          Approve, decline, or delete notary appointments. Status changes do not
+          send automatic emails yet (only the initial request email is sent if SMTP is configured).
+        </p>
+        <div class="table-wrapper">
+          <table class="table" id="bookingsTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Service</th>
+                <th>Date / Time</th>
+                <th>Contact</th>
+                <th>Status</th>
+                <th>Details</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Filled by admin.js -->
+            </tbody>
+          </table>
+        </div>
+        <p id="adminMessage" class="form-message"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
